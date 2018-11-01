@@ -1,0 +1,18 @@
+import RPi.GPIO as GPIO         //Importa a biblioteca das GPIO
+import time                               //Importa a biblioteca de tempo
+import sys
+GPIO.setmode(GPIO.BOARD) //Identifica a placa e os respectivos pinos
+GPIO.setup(40, GPIO.OUT)       //Configura o pino 20 da placa como saída
+GPIO.setup(38, GPIO.OUT)       //Configura o pino 21 da placa como saída
+GPIO.setup(36, GPIO.OUT)       //Configura o pino 16 da placa como saída
+for i in range(0,5):                               //Inicia laço de repetição para 5 repetições
+GPIO.output(38, 1)               //Acende led vermelho
+time.sleep(2)                        //Delay de 2 segundos
+GPIO.output(38, 0)               //Apaga led vermelho
+GPIO.output(40, 1)               //Acende led verde
+time.sleep(1)                        //Delay de 1 segundo
+GPIO.output(40, 0)               //Apaga led verde
+GPIO.output(36, 1)               //Acende led amarelo
+time.sleep(1)                        //Delay de 1 segundo
+GPIO.output(36, 0)               //Apaga led amarelo
+GPIO.cleanup()
