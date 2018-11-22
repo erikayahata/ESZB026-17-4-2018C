@@ -1,0 +1,8 @@
+# Arquivo de exemplo com quaisquer dados
+# X  Y
+  1  5
+  2  3
+  3  7
+  4  9
+  5  8
+  6  11
